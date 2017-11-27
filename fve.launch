@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<launch>
+	<include file="startGPS.launch"/>
+	<include file="bno055_teensy.launch"/>
+	<include file="razor-pub-husky.launch"/>
+</launch>
