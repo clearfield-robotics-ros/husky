@@ -1,5 +1,4 @@
 <launch>
-
   <rosparam command="load" file="fve_dual_ekf_navsat.yaml" />
 
   <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se_odom" clear_params="true"/>
@@ -14,12 +13,9 @@
   </node>
 
   <node pkg="tf2_ros" type="static_transform_publisher" name="gps" args="0.08305 0 0.5588 0 0 0 base_link gps" />
-  <node pkg="tf2_ros" type="static_transform_publisher" name="razor_imu" args="0 -0.1973 0 1.570796327 0 0 base_link base_imu_link" />
-  <!--node pkg="tf2_ros" type="static_transform_publisher" name="bno_imu" args="0 0.17 0 1.570796327 0 0 base_link imu_link" /-->    
+  <node pkg="tf2_ros" type="static_transform_publisher" name="razor_imu" args="0 -0.1973 0 0 0 0 base_link imu_link" />   
 
   <include file="$(find robot_localization)/launch/hector_trajectory.launch"/>
 
-  <node pkg="rosbag" type="play" name="player" args="--clock complete_sub.bag"/>
-
-
+  <node pkg="rosbag" type="play" name="player" args="--clock /home/aaaaaaron/minebot_ws/src/husky/sunday_gps.bag"/>
 </launch>
