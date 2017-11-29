@@ -1,0 +1,10 @@
+<launch>
+	<node name="joy" pkg="joy" type="joy_node" output="screen">
+        <param name="dev" value="/dev/input/js1"/>
+    </node>
+
+    <node name="$(anon teleop_twist_joy)" pkg="teleop_twist_joy" type="teleop_node">
+        <rosparam command="load" file="$(find locus_joy)/config/joy.yaml"/>
+    </node>
+
+</launch>
