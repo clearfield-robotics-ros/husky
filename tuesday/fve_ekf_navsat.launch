@@ -122,5 +122,6 @@
     </node>
 
     <include file="$(find robot_localization)/launch/hector_trajectory.launch"/>
+    <include file="fve_markers.launch"/>
 
 </launch>
