@@ -10,11 +10,13 @@
 	<param name="wp3Ns" value="wp3"/>
 	<param name="wp4Ns" value="wp4"/> -->
 
-	<node pkg="tf2_ros" type="static_transform_publisher" name="wp1" args="589873.4942102089 4477461.717478201 0 0 0 0 utm wp1"></node>
-
-<!-- 	need a frame from gps point collected to utm
-	then tf2 to utm frame -->
-
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="wp1" args="589873.4942102089 4477461.717478201 0 0 0 0 utm wp1"></node> --> <!--lat 40.4429526965 lon -79.9402506258 -->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp1" args="589873.3456664842 4477462.026934056 0 0 0 0 utm wp1"></node> <!--lat 40.4429555 lon -79.9402523333 :: 40near-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp2" args="589878.2554839734 4477479.753223937 0 0 0 0 utm wp2"></node> <!--lat 40.4431128169 lon -79.9401896107 :: 40away-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp3" args="589860.5332525528 4477484.663542169 0 0 0 0 utm wp3"></node> <!--lat 40.4431589624 lon -79.9403978556 neg40away-->
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="wp3" args="589860.8992177073 4477484.555602142 0 0 0 0 utm wp3"></node>  --><!--lat 40.4431597737 lon -79.9403958859 neg40awayside-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp4" args="589856.189393133 4477467.571472195 0 0 0 0 utm wp4"></node> <!--lat 40.443007297 lon -79.9404538156 neg40away-->
+	<!-- <node pkg="tf2_ros" type="static_transform_publisher" name="wp4" args="589856.3810174 4477466.97699518 0 0 0 0 utm wp4"></node> --><!--lat 40.4430019215 lon -79.9404516405 neg40awayside-->
 
   	<node pkg="fve_markers" type="fve_markers_node" name="fve_markers_node"></node>
 
