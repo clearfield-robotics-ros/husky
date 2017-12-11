@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<launch>
+
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp1" args="589873.471268259 4477462.2883144045 0 0 0 0 utm wp1"></node> <!--lat 40.4429555 lon -79.9402523333 :: 40near-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp2" args="589878.8124438956 4477479.856025786 0 0 0 0 utm wp2"></node> <!--lat 40.4431128169 lon -79.9401896107 :: 40away-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp3" args="589869.9885190326 4477482.100942044 0 0 0 0 utm wp3"></node> <!--lat 40.443007297 lon -79.9404538156 neg40away-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp4" args="589861.056371696 4477484.244598594 0 0 0 0 utm wp4"></node> <!--lat 40.4431589624 lon -79.9403978556 neg40away-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp5" args="589856.4429444404 4477466.525932785 0 0 0 0 utm wp5"></node> <!--lat 40.443007297 lon -79.9404538156 neg40away-->
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp6" args="589865.2660026919 4477463.839016988 0 0 0 0 utm wp6"></node> <!--lat 40.443007297 lon -79.9404538156 neg40away-->
+
+  	<node pkg="fve_markers" type="fve_markers_node" name="fve_markers_node"></node>
+
+</launch>

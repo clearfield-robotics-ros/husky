@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<launch>
+
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp1" args="0 0 0 0 0 0 odom wp1"></node>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp2" args="7.71812548887 16.3613569409 0 0 0 0 odom wp2"></node>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp3" args="-0.474766140316 20.5772045526 0 0 0 0 odom wp3"></node>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp4" args="-8.46367851183 24.3854825108 0 0 0 0 odom wp4"></node>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp5" args="-16.2061629416 7.8633338466 0 0 0 0 odom wp5"></node>
+	<node pkg="tf2_ros" type="static_transform_publisher" name="wp6" args="-8.12982775362 3.80572144895 0 0 0 0 odom wp6"></node>
+
+  	<node pkg="fve_markers" type="fve_markers_node" name="fve_markers_node"></node>
+
+</launch>

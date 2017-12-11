@@ -1,0 +1,63 @@
+filter
+/bno/imu
+/bno/imuStat
+/clock
+/cmd_vel
+/fix
+/husky_velocity_controller/odom
+/imu
+/rosout
+/rosout_agg
+
+/gps -> gps
+
+latitude: 40.4429632886 		589873.071268259
+longitude: -79.9402554465 		4477462.8883144045
+
+latitude: 40.4431209536 		589878.4124438956
+longitude: -79.9401899904 		4477480.456025786
+
+latitude: 40.4431421286 		589869.5885190326
+longitude: -79.9402937041 		4477482.700942044
+
+latitude: 40.4431624031 		589860.656371696
+longitude: -79.9403987081 		4477484.844598594
+
+latitude: 40.4430032996 		589856.0429444404
+longitude: -79.9404556052 		4477467.125932785
+
+latitude: 40.4429781435 		589864.8660026919
+longitude: -79.9403519644 		4477464.439016988
+
+results:
+run1 : 5/7 		5 and 6 messed up, offset looks the same as FVE, ground truth issue?
+run2 : 4/7		4, 5, 6 messed up
+run3 : 4/7 		same as run2
+run4 : 2/7  		only origin ok
+run5 : 2/7 		only origin ok
+run6 : 3/7 		only origin and 2nd ok
+run7 : 3/7 		only origin and 3rd ok
+
+46.9%
+
+use run4 as ground truth, with odom
+wp1 : 0 0
+wp2 : 7.71812548887 16.3613569409
+wp3 : -0.474766140316 20.5772045526
+wp4 : -8.46367851183 24.3854825108
+wp5 : -16.2061629416 7.8633338466
+wp6 : -8.12982775362 3.80572144895
+
+
+results:
+run1 : 4/7 		final 3 messed up
+run2 : 6/7 		6 messed up
+run3 : 6/7 		6 messed up
+run4 : 7/7 		as expected
+run5 : 7/7
+run6 : 6/7  		7 messed up
+run7 : 4/7 		3, 5, 6 messed up
+
+78.57%
+
+
