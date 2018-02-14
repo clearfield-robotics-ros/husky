@@ -1,10 +1,10 @@
 <launch>
-	<node pkg="rosbag" type="play" name="player" args="--clock /home/aaaaaaron/minebot_ws/src/husky/sunday_gps.bag"/>
+	<node pkg="rosbag" type="play" name="player" args="--clock /home/ubuntu/minebot_ws/src/husky/sunday_gps.bag"/>
 
     <include file="fve_ekf_odom.launch"/>
 
     <node pkg="tf2_ros" type="static_transform_publisher" name="razor_imu" args="0 -0.1973 0 1.570796327 0 0 base_link base_imu_link" />
-    <!--node pkg="tf2_ros" type="static_transform_publisher" name="bno_imu" args="0 0.17 0 1.570796327 0 0 base_link imu_link" /-->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="bno_imu" args="0 0.17 0 1.570796327 0 0 base_link imu_link" />
 
     <include file="$(find robot_localization)/launch/hector_trajectory.launch"/>
 </launch>
